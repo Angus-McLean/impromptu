@@ -1,0 +1,12 @@
+#navbar {
+    position:absolute;
+    background-color: transparent;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+.clickable-content {
+  pointer-events: auto;
+}
