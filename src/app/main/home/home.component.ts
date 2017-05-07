@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GoogleMapsService } from './googlemaps.service';
-import { EventsService } from './../../shared/event/events.service';
+import { EventsService } from './../../shared/events/event/events.service';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class HomeComponent implements AfterViewInit {
     this.eventsService.events.forEach(event => {
       this.googleMapsService.markerFromEvent(event)
         .addListener('click', ev => {
-          this.router.navigate(['home', event.id])
+          this.router.navigate(['home', event.id, 'general'])
         });
     });
   }

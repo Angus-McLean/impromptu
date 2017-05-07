@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Event } from './../../shared/event/Event.model';
+import { Event } from './../../shared/events/event/Event.model';
 
 declare const google: any;
 

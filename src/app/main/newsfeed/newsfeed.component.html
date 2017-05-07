@@ -1,41 +1,54 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
-        <div class="card-container" (click)="closeModal('home')">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12 col-md-offset-1">
-                <div class="card center-card" (click)="stopPropagation($event)">
-                <div class="card-header row" data-background-color="red">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <img class="profile-photo" src="../assets/img/faces/profile_photo.jpg">
-                    </div>
-                    <div class="col-md-9">
-                      <h4 class="title">{{event.name}}</h4>
-                      <p class="category">{{event.categories.join(', ')}}</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-md-4">
-                      General
-                    </div>
-                    <div class="col-md-4">
-                      Friends
-                    </div>
-                    <div class="col-md-4">
-                      Chat
-                    </div>
-                  </div>
-                </div>
-                <div class="card-content">
-                </div>
+      <div class="col col-sm-12 col-lg-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card card-stats" >
+            <div class="card-header" data-background-color="orange">
+              <i class="material-icons">content_copy</i>
+            </div>
+            <div class="card-content">
+              <p class="category">Used Space</p>
+              <h3 class="title">49/50<small>GB</small></h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons text-danger">warning</i> <a href="#pablo">Get More Space...</a>
               </div>
             </div>
           </div>
         </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card card-stats" >
+            <div class="card-header" data-background-color="red">
+              <i class="material-icons">info_outline</i>
+            </div>
+            <div class="card-content">
+              <p class="category">Fixed Issues</p>
+              <h3 class="title">75</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">local_offer</i> Tracked from Github
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="alert alert-info alert-with-icon" data-notify="container">
+            <button type="button" aria-hidden="true" class="close">×</button>
+            <i data-notify="icon" class="material-icons">add_alert</i>
+            <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <app-received-message [messageId]="1"></app-received-message>
+        </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col col-sm-6">
+        <app-minimal-event-card [event]="eventsService.events[0]"></app-minimal-event-card>
       </div>
     </div>
   </div>

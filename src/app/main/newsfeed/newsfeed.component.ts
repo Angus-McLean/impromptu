@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventsService } from 'app/shared/events/event/events.service';
 
 @Component({
   selector: 'app-newsfeed',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsfeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private eventsService: EventsService
+  ) { }
 
   ngOnInit() {
   }
