@@ -8,9 +8,14 @@
               <div class="col-md-3">
                 <img class="profile-photo" src="../assets/img/faces/profile_photo.jpg">
               </div>
-              <div class="col-md-9">
+              <div class="col-md-7">
                 <h4 class="title">{{event.name}}</h4>
                 <p class="category">{{event.categories.join(', ')}}</p>
+              </div>
+              <div class="col-md-2 text-center">
+                <h2 class="title" style="margin-bottom: 0px;">8</h2>
+                <p style="margin-bottom: 0px;">May</p>
+                <p class="category">1pm - 6pm</p>
               </div>
             </div>
             <hr>
@@ -26,7 +31,12 @@
               </div>
             </div>
           </div>
-          <router-outlet></router-outlet>
+          <div class="wrapper">
+            <div class="inner" id="inner" style="padding-top:0px;">
+              <router-outlet name="header"></router-outlet>
+              <router-outlet style="overflow-x:hidden;"></router-outlet>
+            </div>
+          </div>
         </div>
       </div>
     </div>

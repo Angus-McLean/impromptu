@@ -17,7 +17,8 @@
 }
 
 .card-content {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .profile-photo {
@@ -25,4 +26,34 @@
   height: 130px;
   margin: -50px auto 0;
   border-radius: 50%;
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.wrapper .inner {
+  overflow-y: scroll;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-top: 64px;
+}
+.wrapper .inner::-webkit-scrollbar {
+  width: 0 !important;
+}
+.wrapper .inner .content {
+  padding: 10.66667px;
+  position: relative;
+  margin-bottom: 32px;
 }
