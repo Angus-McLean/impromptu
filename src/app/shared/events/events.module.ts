@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ChatModule } from './../chat/chat.module';
+import { UsersModule } from './../users/users.module';
 import { MinimalChatComponent } from './../chat/minimal-chat/minimal-chat.component';
 
 // components
@@ -21,14 +22,13 @@ export const eventRoutes: Routes = [
   { path: 'general', component: ViewGeneralComponent },
   { path: 'attendees', component: ViewAttendeesComponent },
   { path: 'messages', component: MessagesComponent },
-  // { path: '', redirectTo: 'general', pathMatch: 'full'}
 ]
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(eventRoutes),
-    ChatModule
+    ChatModule, UsersModule
   ],
   declarations: [
     EventCardComponent,

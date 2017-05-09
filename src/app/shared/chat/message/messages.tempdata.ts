@@ -21,5 +21,12 @@ export const MyMessages: Message[] = [
     sender: null,
     destination_id : '3',
     content: 'BBQ in the park... that\'s all there is to it.'
+  },
+  <Message>{
+    id: '4',
+    sender_id: '4',
+    sender: null,
+    destination_id : '3',
+    content: 'BBQ in the park... that\'s all there is to it.'
   }
 ];

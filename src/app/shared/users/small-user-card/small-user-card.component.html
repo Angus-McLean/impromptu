@@ -1,0 +1,25 @@
+<div class="card card-stats" >
+  <div class="row">
+    <div class="col-sm-3 message-sender">
+      <img class="profile-photo" [src]="user.profile_img">
+    </div>
+    <div class="card-content col-sm-9">
+      <ng-content select="[card-preheader]"></ng-content>
+      <h4 class="title">{{user.name.first}} {{user.name.last}}</h4>
+    </div>
+  </div>
+  <div class="card-footer row">
+    <!-- <ng-content select="[card-footer]" style="display:block;"></ng-content> -->
+    <div card-footer class="row text-center block" style="display:block;">
+      <div *ngIf="actions.includes('message')" class="col-sm-6">
+        <a href="#"><i class="material-icons">reply</i> Message</a>
+      </div>
+      <div *ngIf="actions.includes('invite')" class="col-sm-6">
+        <a href="#"><i class="material-icons">mail</i> Invite</a>
+      </div>
+      <div *ngIf="actions.includes('poke')" class="col-sm-6">
+        <a href="#"><i class="material-icons">mail</i> Invite</a>
+      </div>
+    </div>
+  </div>
+</div>
