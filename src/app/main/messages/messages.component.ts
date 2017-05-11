@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 declare const $;
 
@@ -10,7 +10,7 @@ declare const $;
     '../../../assets/css/styles-overrides.css'
   ]
 })
-export class MessagesComponent implements OnInit {
+export class MessagesComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
@@ -19,6 +19,11 @@ export class MessagesComponent implements OnInit {
 
   pullDown() {
     $('#pull-down').animate({height:'90%'})
+  }
+
+  ngAfterViewInit() {
+    console.log('triggering');
+    $("#horizontal-scroll").perfectScrollbar();
   }
 
 }

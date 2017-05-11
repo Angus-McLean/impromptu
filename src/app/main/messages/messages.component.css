@@ -3,3 +3,15 @@
   /*background: red;*/
   height: 0px;
 }
+
+.tab-button {
+  border-right: 1px solid #eee;
+}
+
+.horizontal-scroll {
+  overflow-x: inital;
+}
+
+.list-inline {
+  white-space:nowrap;
+}

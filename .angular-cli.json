@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css"
       ],
       "scripts": [
         "./assets/js/jquery-3.1.0.min.js",
@@ -30,7 +31,8 @@
         "./assets/js/initMenu.js",
         "./assets/js/material.min.js",
         "./assets/js/material-dashboard.js",
-        "./assets/js/sidebar-moving-tab.js"
+        "./assets/js/sidebar-moving-tab.js",
+        "./../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
