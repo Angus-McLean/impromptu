@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-messages',
   template: '<app-minimal-chat></app-minimal-chat>',
-  styleUrls: ['./messages.component.css']
+  styleUrls: ['../../../../assets/css/styles-overrides.css']
 })
 export class MessagesComponent implements OnInit {
 

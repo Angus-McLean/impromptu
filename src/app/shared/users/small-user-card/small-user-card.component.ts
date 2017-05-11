@@ -5,7 +5,7 @@ import { User } from './../User.model';
 @Component({
   selector: 'app-small-user-card',
   templateUrl: './small-user-card.component.html',
-  styleUrls: ['./small-user-card.component.css']
+  styleUrls: ['../../../../assets/css/styles-overrides.css']
 })
 export class SmallUserCardComponent implements OnInit {
 

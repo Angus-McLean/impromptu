@@ -12,12 +12,38 @@
       <div class="row">
         <app-sent-message includeAlignment="true" messageId="4"></app-sent-message>
       </div>
+      <div class="row">
+          <app-received-message includeAlignment="true" messageId="1"></app-received-message>
+      </div>
+      <div class="row">
+          <app-sent-message includeAlignment="true" messageId="2"></app-sent-message>
+      </div>
+      <div class="row">
+        <app-sent-message includeAlignment="true" messageId="3"></app-sent-message>
+      </div>
+      <div class="row">
+        <app-sent-message includeAlignment="true" messageId="4"></app-sent-message>
+      </div>
       <div class="row padding-top">
+        <br>
+        <br>
+        <br>
         <br>
       </div>
     </div>
     <div class="bottom" id="bottom">
-      <textarea class="input" id="input"></textarea>
-      <div class="send" id="send"></div>
+      <div class="row" style="padding:0 50px 0 50px;">
+          <hr style="margin:0px;">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="form-group form-black label-floating is-empty" style="margin:0px;">
+                <!-- <textarea class="form-control input" rows="1"></textarea> -->
+                <textarea id="message-textarea" class="form-control message-textarea"></textarea>
+                <span class="material-input"></span>
+              </div>
+            </div>
+          </div>
+          <div class="send" id="send"></div>
+      </div>
     </div>
 </div>

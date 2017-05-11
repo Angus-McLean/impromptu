@@ -1,3 +1,46 @@
-<p>
-  messages works!
-</p>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header row" data-background-color="red">
+            <div class="row">
+              <div class="col-md-2">
+                <img class="large-photo" src="../assets/img/faces/profile_photo.jpg">
+              </div>
+              <div class="col-md-8">
+                <h4 class="title">BBQ in the park! Woot!</h4>
+                <p class="category">Angus McLean, Jason Banks, Emily Parks, and 10 more</p>
+              </div>
+              <div class="col-md-2 text-center">
+                <h2 class="title" style="margin-bottom: 0px;">8</h2>
+                <p style="margin-bottom: 0px;">May</p>
+                <p class="category">1pm - 6pm</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div [routerLink]="['general']" class="col-md-3">
+                <i class="material-icons">search</i> Search
+              </div>
+              <div [routerLink]="['attendees']" class="col-md-3">
+                Recent
+              </div>
+              <div [routerLink]="['messages']" class="col-md-3">
+                The Poon Platoon
+              </div>
+              <div [routerLink]="['messages']" class="col-md-3">
+                Chilbo Baggins
+              </div>
+            </div>
+          </div>
+          <div class="wrapper" style="height:70vh;">
+            <div class="inner" id="inner" style="padding-top:0px;">
+              <app-minimal-chat></app-minimal-chat>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

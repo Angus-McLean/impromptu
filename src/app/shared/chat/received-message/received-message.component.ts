@@ -5,7 +5,10 @@ import { MessagesService } from './../message/messages.service';
 @Component({
   selector: 'app-received-message',
   templateUrl: './received-message.component.html',
-  styleUrls: ['./../assets/chat.component.css']
+  styleUrls: [
+    './../assets/chat.component.css',
+    '../../../../assets/css/styles-overrides.css'
+  ]
 })
 export class ReceivedMessageComponent implements OnInit {
 

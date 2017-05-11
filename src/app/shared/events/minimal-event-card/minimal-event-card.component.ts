@@ -4,7 +4,7 @@ import { Event } from './../event/Event.model';
 @Component({
   selector: 'app-minimal-event-card',
   templateUrl: './minimal-event-card.component.html',
-  styleUrls: ['./minimal-event-card.component.css']
+  styleUrls: ['../../../../assets/css/styles-overrides.css']
 })
 export class MinimalEventCardComponent implements OnInit {
 

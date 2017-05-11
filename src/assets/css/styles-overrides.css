@@ -1,3 +1,7 @@
+.card {
+  margin: 25px 0 10px 0;
+}
+
 .card-container {
   position: fixed;
   z-index: 1;
@@ -11,8 +15,8 @@
 }
 
 .center-card {
-    margin: 15% auto; /* 15% from the top and centered */
-    width: 80%; /* Could be more or less, depending on screen size */
+    margin: 15% auto;
+    width: 80%;
     height: 85%;
 }
 
@@ -21,17 +25,42 @@
   overflow-x: hidden;
 }
 
-.profile-photo {
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.large-photo {
   width: 130px;
   height: 130px;
-  margin: -50px auto 0;
+  margin: -55px 10px;
   border-radius: 50%;
 }
 
+.profile-photo {
+  width: 75px;
+  height: 75px;
+  margin: -30px 10px;
+  border-radius: 50%;
+}
+
+.message-photo {
+  width: 50px;
+  height: 50px;
+  margin: -30px auto 0;
+  border-radius: 50%;
+}
+
+.btn {
+  text-transform: none;
+}
+
 .wrapper {
-  height: 100%;
-  min-height: 400px;
-  max-height: 400px;
   width: 100%;
   overflow: hidden;
   position: relative;

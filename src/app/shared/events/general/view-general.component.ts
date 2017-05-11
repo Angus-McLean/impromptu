@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-view-general',
   templateUrl: './view-general.partial.html',
-  styleUrls: ['./view-general.component.css']
+  styleUrls: ['../../../../assets/css/styles-overrides.css']
 })
 export class ViewGeneralComponent implements OnInit {
 

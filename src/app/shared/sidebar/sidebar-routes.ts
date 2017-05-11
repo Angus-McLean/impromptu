@@ -10,8 +10,8 @@ export interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: 'home', title: 'Be Impromptu!',  icon:'bubble_chart', class: '' },
     { path: 'newsfeed', title: 'NewsFeed',  icon: 'dashboard', class: '' },
-    { path: 'events', title: 'Events',  icon:'event_available', class: '' },
-    { path: 'messages', title: 'Messages',  icon:'question_answer', class: '' },
+    { path: 'events', title: 'Your Events',  icon:'event_available', class: '' },
+    { path: 'chat', title: 'Messages',  icon:'question_answer', class: '' },
     { path: 'notifications', title: 'Notifications',  icon:'notifications', class: '' },
     { path: 'settings', title: 'Settings',  icon:'settings', class: '' }
 ];

@@ -6,7 +6,10 @@ import { MessagesService } from './../message/messages.service';
 @Component({
   selector: 'app-sent-message',
   templateUrl: './sent-message.component.html',
-  styleUrls: ['./../assets/chat.component.css']
+  styleUrls: [
+    './../assets/chat.component.css',
+    '../../../../assets/css/styles-overrides.css'
+  ]
 })
 export class SentMessageComponent implements OnInit {
 

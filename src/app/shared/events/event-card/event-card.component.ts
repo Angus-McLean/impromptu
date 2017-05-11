@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-event-card',
   templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.css']
+  styleUrls: ['../../../../assets/css/styles-overrides.css']
 })
 export class EventCardComponent implements OnInit {
 

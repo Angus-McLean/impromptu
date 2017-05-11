@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'newsfeed', component: NewsfeedComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'messages', component: MessagesComponent },
+  { path: 'chat', component: MessagesComponent },
   { path: 'notifications', component: NotificationsComponent },
   { path: 'settings', component: SettingsComponent },
   ...homeRoutes
