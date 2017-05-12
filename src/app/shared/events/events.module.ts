@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { MdMenuModule, MdIconModule } from '@angular/material';
 import { ChatModule } from './../chat/chat.module';
 import { UsersModule } from './../users/users.module';
 import { MinimalChatComponent } from './../chat/minimal-chat/minimal-chat.component';
@@ -12,6 +13,7 @@ import { EventCardComponent } from './event-card/event-card.component';
 import { ViewGeneralComponent } from './general/view-general.component';
 import { ViewAttendeesComponent } from './attendees/view-attendees.component';
 import { MessagesComponent } from './messages/messages.component';
+
 
 // providers
 import { EventsService } from './event/events.service';
@@ -28,7 +30,7 @@ export const eventRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(eventRoutes),
-    ChatModule, UsersModule
+    ChatModule, UsersModule, MdMenuModule, MdIconModule
   ],
   declarations: [
     EventCardComponent,

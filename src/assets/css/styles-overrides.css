@@ -25,6 +25,17 @@
   overflow-x: hidden;
 }
 
+.card-option-right {
+  position:absolute;
+  top:-5px;
+  right:30px;
+}
+
+.card-option-right button {
+  background: transparent;
+  border: 0px;
+}
+
 .vertical-align {
     display: flex;
     align-items: center;
@@ -62,6 +73,12 @@ a {
 
 .btn {
   text-transform: none;
+}
+
+.material-editable {
+  display: table;
+  font-style: italic;
+  border-bottom: 1px dashed grey;
 }
 
 .wrapper {

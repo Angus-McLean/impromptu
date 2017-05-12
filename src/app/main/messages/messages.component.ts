@@ -17,13 +17,10 @@ export class MessagesComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
 
-  pullDown() {
-    $('#pull-down').animate({height:'90%'})
-  }
-
   ngAfterViewInit() {
     console.log('triggering');
     $("#horizontal-scroll").perfectScrollbar();
+    $("#inner").perfectScrollbar();
   }
 
 }

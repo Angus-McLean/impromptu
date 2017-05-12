@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventsService } from './../event/events.service';
+import { Subject, Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -11,6 +12,8 @@ import 'rxjs/add/operator/map';
 export class EventCardComponent implements OnInit {
 
   private event: any;
+  editClick = new Subject()
+  isEditing: Observable<boolean> = this.editClick.asObservable().scan(a => !a);
 
   constructor(
     private route: ActivatedRoute,

@@ -4,15 +4,31 @@
       <div class="col-md-12 col-md-offset-1">
         <div class="card center-card" (click)="stopPropagation($event)">
           <div class="card-header row" data-background-color="red">
-            <div class="row">
+            <div class="card-option-right">
+              <button md-button [mdMenuTriggerFor]="menu">
+                <i class="material-icons">more_vert</i>
+              </button>
+              <md-menu #menu="mdMenu" positionX="150px">
+                <button md-menu-item>
+                  <a><i class="material-icons">dialpad</i> Redial</a>
+                </button>
+                <button md-menu-item>
+                  <a><i class="material-icons">voicemail</i> Check voicemail</a>
+                </button>
+                <button md-menu-item>
+                  <a><i class="material-icons">notifications_off</i> Disable alerts</a>
+                </button>
+              </md-menu>
+            </div>
+            <div class="row" style="margin-right:20px;">
               <div class="col-md-3">
-                <img class="profile-photo" src="../assets/img/faces/profile_photo.jpg">
+                <img class="large-photo" src="../assets/img/faces/profile_photo.jpg">
               </div>
               <div class="col-md-7">
-                <h4 class="title">{{event.name}}</h4>
-                <p class="category">{{event.categories.join(', ')}}</p>
+                <h4 class="title" [ngClass]="{'material-editable':isEditing|async}" [attr.contenteditable]="isEditing | async" spellcheck="false">{{event.name}}</h4>
+                <p class="category" [ngClass]="{'material-editable':isEditing|async}" [attr.contenteditable]="isEditing | async" spellcheck="false">{{event.categories.join(', ')}}</p>
               </div>
-              <div class="col-md-2 text-center">
+              <div class="col-md-2 text-center" (click)="editClick.next()">
                 <h2 class="title" style="margin-bottom: 0px;">8</h2>
                 <p style="margin-bottom: 0px;">May</p>
                 <p class="category">1pm - 6pm</p>
