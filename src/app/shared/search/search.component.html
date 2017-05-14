@@ -1,0 +1,274 @@
+<div class="card-container" (click)="closeModal('home')">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-1">
+        <div class="card center-card" (click)="stopPropagation($event)">
+          <div class="card-header row" data-background-color="red">
+            <div class="card-option-right">
+              <button md-button [mdMenuTriggerFor]="menu">
+                <i class="material-icons">more_vert</i>
+              </button>
+              <md-menu #menu="mdMenu" positionX="150px">
+                <button md-menu-item>
+                  <a><i class="material-icons">save</i> Save Search</a>
+                </button>
+                <button md-menu-item>
+                  <a><i class="material-icons">delete</i> Clear Search</a>
+                </button>
+              </md-menu>
+            </div>
+            <div class="row" style="margin-right:20px;">
+              <div class="col-md-1">
+                <div>
+                  <i class="material-icons" style="font-size:40px;">search</i>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <!-- <h4 class="title"> Events Search</h4> -->
+                <div class="form-group form-black is-empty" style="padding:0px; margin:0px;">
+                  <input type="text" class="form-control" placeholder="Events Search" style="color:white; font-size:25px;">
+                  <span class="material-input"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper" style="height:60vh;">
+            <router-outlet name="header"></router-outlet>
+            <div class="card-content" style="max-height:150px; box-shadow:0 12px 20px -10px rgba(0,0,0, 0.1), 0 4px 20px 0px rgba(0, 0, 0, 0.10), 0 7px 8px -5px rgba(0,0,0, 0.1);">
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                  <div class="row">
+                    <div class="btn btn-danger btn-round">
+                      <a>Who : Public <i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                    <div class="btn btn-danger btn-round">
+                      <a>Time : Tonight <i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                    <div class="btn btn-danger btn-round">
+                      <a>Category : Drinking<i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                    <!-- </div>
+                    <div class="row"> -->
+                    <div class="btn btn-danger btn-round">
+                      <a>Category : Movies <i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                    <div class="btn btn-danger btn-round">
+                      <a>Category : Hanging out <i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                    <div class="btn btn-danger btn-round">
+                      <a>Follow <i class="material-icons" href="#">close</i></a>
+                      <div class="ripple-container"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <hr style="margin: 10px; border-top: 1px solid #000;"> -->
+            </div>
+            <div class="inner" id="inner" style="padding-top:0px; position:absolute; height:calc(100% - 150px);">
+              <div class="card-content">
+                <div class="row">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <h2 class="title" style="margin-left:20px;">Groups </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> Happening now <i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> in 1 hour<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> in 2 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> in 3 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> in 4 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">supervisor_account</i> in 5 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <p class="category">More.. </p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin: 10px;">
+                </div>
+                <div class="row">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <h2 class="title" style="margin-left:20px;">People </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> Happening now <i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> in 1 hour<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> in 2 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> in 3 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> in 4 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">person</i> in 5 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin: 10px;">
+                </div>
+                <div class="row">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <h2 class="title" style="margin-left:20px;">Time Filters </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Happening now <i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Starts in 1 hour<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Starts in 2 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Starts in 3 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Starts in 4 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">access_time</i> Starts in 5 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin: 10px;">
+                </div>
+                <div class="row">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <h2 class="title" style="margin-left:20px;">Location </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> Happening now <i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> in 1 hour<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> in 2 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> in 3 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> in 4 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">location_on</i> in 5 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin: 10px;">
+                </div>
+                <div class="row">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <h2 class="title" style="margin-left:20px;">Categories </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> Happening now <i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> in 1 hour<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> in 2 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> in 3 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> in 4 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                        <div class="btn btn-danger btn-round">
+                          <a><i class="material-icons">local_offer</i> in 5 hours<i class="material-icons" href="#">close</i></a>
+                          <div class="ripple-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin: 10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MdMenuModule } from '@angular/material';
 
 // custom modules
 import { RoutingModule } from './shared/routes/app.routes';
@@ -25,6 +26,8 @@ import { SettingsComponent } from './main/settings/settings.component';
 // import { MdToolbarModule, MdSidenavModule } from '@angular/material';
 import { GoogleMapsService } from './main/home/googlemaps.service';
 import { SidebarService } from './shared/sidebar/sidebar.service';
+import { QuickCreateComponent } from './shared/quick-create/quick-create.component';
+import { SearchComponent } from './shared/search/search.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +40,17 @@ import { SidebarService } from './shared/sidebar/sidebar.service';
     EventsComponent,
     MessagesComponent,
     NotificationsComponent,
-    SettingsComponent
+    SettingsComponent,
+    QuickCreateComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, BrowserAnimationsModule, RoutingModule,
+    MdMenuModule,
     EventsModule, ChatModule
   ],
   providers: [
-    GoogleMapsService, SidebarService
+    GoogleMapsService, SidebarService, MdMenuModule
   ],
   bootstrap: [AppComponent]
 })

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 // import { MapComponent } from './../../main/map.component';
 import { HomeComponent } from './../../main/home/home.component';
 import { EventCardComponent } from './../../shared/events/event-card/event-card.component';
+import { SearchComponent } from './../../shared/search/search.component';
 import { eventRoutes } from './../../shared/events/events.module';
 
 export const homeRoutes: Routes = [
   { path: 'home', component: HomeComponent,
     children: [
+      { path: 'search', component: SearchComponent },
       { path: ':eventId', component: EventCardComponent },
       { path: ':eventId', component: EventCardComponent, children: eventRoutes }
     ]

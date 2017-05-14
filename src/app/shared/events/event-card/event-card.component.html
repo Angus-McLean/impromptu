@@ -9,8 +9,11 @@
                 <i class="material-icons">more_vert</i>
               </button>
               <md-menu #menu="mdMenu" positionX="150px">
-                <button md-menu-item>
-                  <a><i class="material-icons">dialpad</i> Redial</a>
+                <button md-menu-item *ngIf="!(isEditing|async)" (click)="editClick.next()">
+                  <a><i class="material-icons">edit</i> Edit</a>
+                </button>
+                <button md-menu-item *ngIf="(isEditing|async)" (click)="editClick.next()">
+                  <a><i class="material-icons">save</i> Save</a>
                 </button>
                 <button md-menu-item>
                   <a><i class="material-icons">voicemail</i> Check voicemail</a>
@@ -22,13 +25,23 @@
             </div>
             <div class="row" style="margin-right:20px;">
               <div class="col-md-3">
-                <img class="large-photo" src="../assets/img/faces/profile_photo.jpg">
+                <div class="collage-container large-photo">
+                  <img class="" src="../assets/img/faces/profile_photo.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo1.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo2.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo3.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo4.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo5.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo6.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo7.jpg">
+                  <img class="" src="../assets/img/faces/profile_photo8.jpg">
+                </div>
               </div>
               <div class="col-md-7">
                 <h4 class="title" [ngClass]="{'material-editable':isEditing|async}" [attr.contenteditable]="isEditing | async" spellcheck="false">{{event.name}}</h4>
                 <p class="category" [ngClass]="{'material-editable':isEditing|async}" [attr.contenteditable]="isEditing | async" spellcheck="false">{{event.categories.join(', ')}}</p>
               </div>
-              <div class="col-md-2 text-center" (click)="editClick.next()">
+              <div class="col-md-2 text-center">
                 <h2 class="title" style="margin-bottom: 0px;">8</h2>
                 <p style="margin-bottom: 0px;">May</p>
                 <p class="category">1pm - 6pm</p>

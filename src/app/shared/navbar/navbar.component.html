@@ -12,8 +12,7 @@
       <ul class="nav navbar-nav navbar-right clickable-content">
         <li>
           <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons">dashboard</i>
-            <p class="hidden-lg hidden-md">Dashboard</p>
+            <i class="material-icons" rel="tooltip" data-placement="bottom" data-original-title="List View">view_list</i>
           </a>
         </li>
         <li class="dropdown">
@@ -37,7 +36,7 @@
           <input type="text" class="form-control" placeholder="Search">
           <span class="material-input"></span>
         </div>
-        <button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="toggleSearch()">
+        <button [routerLink]="['home','search']" type="submit" class="btn btn-white btn-round btn-just-icon" rel="tooltip" data-placement="bottom" data-original-title="Search">
           <i class="material-icons">search</i><div class="ripple-container"></div>
         </button>
       </form>
